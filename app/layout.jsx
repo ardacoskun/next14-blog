@@ -12,7 +12,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="p-20 border border-yellow-400">
+          Iam be visible everywhere!
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );
