@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { geistMono, geistSans } from "./fonts";
 import "./globals.css";
 
@@ -12,9 +13,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="p-20 border border-yellow-400">
-          Iam be visible everywhere!
-        </header>
+        <Header />
         <main>{children}</main>
       </body>
     </html>
