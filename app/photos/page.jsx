@@ -9,7 +9,9 @@ const images = [dog1, dog2, dog3, dog4];
 const Page = () => {
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-semibold">My Photos</h1>
+      <h1 className="grid-cols-1 mb-8 text-2xl font-semibold md:grid-cols-2">
+        My Photos
+      </h1>
       <div className="grid grid-cols-2 gap-4">
         {images.map((item, index) => (
           <div key={index} className="relative overflow-hidden h-60">
@@ -17,7 +19,11 @@ const Page = () => {
               fill
               src={item}
               className="object-cover w-full h-full"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Picture of my dog"
+              quality={50}
+              placeholder="blur"
+              priority={index === 0 || index === 1}
             />
           </div>
         ))}
