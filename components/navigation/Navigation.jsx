@@ -17,6 +17,11 @@ const navLinks = [
     href: "/about/projects",
     name: "Projects",
   },
+  {
+    id: 4,
+    href: "/photos",
+    name: "Photos",
+  },
 ];
 
 const Navigation = () => {
