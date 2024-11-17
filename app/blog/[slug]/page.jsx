@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 const titles = {
   first: "Hello First!",
@@ -14,11 +15,19 @@ export async function generateMetadata({ params }, parent) {
 }
 
 const Page = ({ params }) => {
-  if (!["first", "second"].includes(params.slug)) {
+  if (!["first", "second"].includes(params?.slug)) {
     notFound();
   }
 
-  return <div>Hello! {params.slug}</div>;
+  return (
+    <article className="prose dark:prose-invert">
+      <MDXRemote
+        source={`# Hello World
+      This is from Server Components!
+      `}
+      />
+    </article>
+  );
 };
 
 export default Page;
