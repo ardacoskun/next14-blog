@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { geistMono, geistSans } from "./fonts";
+import { roboto } from "./fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -10,9 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={roboto.className}>
         <Header />
         <main className="mt-12">{children}</main>
       </body>

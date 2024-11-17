@@ -1,3 +1,4 @@
+import { Inter, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
 export const geistSans = localFont({
@@ -10,4 +11,11 @@ export const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+export const inter = Inter({ subsets: ["latin"] });
+
+export const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
 });
