@@ -1,5 +1,6 @@
-import Header from "@/components/Header";
 import { roboto } from "./fonts";
+import Header from "@/components/Header";
+import Chatbot from "@/components/Chatbot";
 import "./globals.css";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <Header />
         <main className="mt-12">{children}</main>
+        <Chatbot />
       </body>
     </html>
   );
