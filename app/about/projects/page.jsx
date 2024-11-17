@@ -3,6 +3,10 @@ import { ErrorBoundary } from "react-error-boundary";
 import ProjectList from "@/components/projects/ProjectList";
 import ProjectListLoading from "@/components/projects/ProjectListLoading";
 
+export const metadata = {
+  title: "Projects",
+};
+
 const Page = async () => {
   return (
     <div>

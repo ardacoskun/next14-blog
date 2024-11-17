@@ -6,6 +6,10 @@ import Image from "next/image";
 
 const images = [dog1, dog2, dog3, dog4];
 
+export const metadata = {
+  title: "Photos",
+};
+
 const Page = () => {
   return (
     <div>

@@ -4,8 +4,11 @@ import Chatbot from "@/components/Chatbot";
 import "./globals.css";
 
 export const metadata = {
-  title: "Next15 Blog",
-  description: "This blog created with Next15,for exercise.",
+  title: {
+    template: "%s | Next15 Blog",
+    default: "Next15 Blog",
+  },
+  // description: "This blog created with Next15,for exercise.",
 };
 
 export default function RootLayout({ children }) {
