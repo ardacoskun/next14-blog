@@ -20,7 +20,7 @@ export default function Home({ searchParams }) {
         {cards}
         <div className="flex space-x-4">
           {/* <button onClick={handleClick}>{isVisible ? "Hide" : "Show"}</button> */}
-          <button onClick={handleAdd}>Add</button>
+          {/* <button onClick={handleAdd}>Add</button> */}
         </div>
       </div>
     </>
