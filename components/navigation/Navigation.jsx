@@ -4,23 +4,23 @@ import styles from "./navigation.module.css";
 const navLinks = [
   {
     id: 1,
-    href: "/",
-    name: "Home",
-  },
-  {
-    id: 2,
     href: "/about",
     name: "About",
   },
   {
-    id: 3,
+    id: 2,
     href: "/about/projects",
     name: "Projects",
   },
   {
-    id: 4,
+    id: 3,
     href: "/photos",
     name: "Photos",
+  },
+  {
+    id: 4,
+    href: "/blog",
+    name: "Blog",
   },
 ];
 
