@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
+import Pagination from "@/components/Pagination";
 
 const Page = async ({ searchParams }) => {
   const tags = searchParams?.tags?.split(",");
   const order = searchParams.order ?? "newest";
   const page = searchParams.page ?? 1;
   const limit = searchParams.limit ?? 3;
-  const posts = await getPosts({
+  const { posts, pageCount } = await getPosts({
     tags,
     newest: order === "newest",
     page,
@@ -47,6 +48,10 @@ const Page = async ({ searchParams }) => {
           </li>
         ))}
       </ul>
+
+      <div className="mt-8">
+        <Pagination pageCount={pageCount} />
+      </div>
     </>
   );
 };
