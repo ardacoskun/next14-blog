@@ -1,5 +1,3 @@
-import React from "react";
-
 const Loading = () => {
   return (
     <div className="p-20">
@@ -9,7 +7,7 @@ const Loading = () => {
           .fill(0)
           .map((_, index) => (
             <li key={index}>
-              <div className="w-full h-24 animate-pulse bg-neutral-100 dark:bg-neutral-700"></div>
+              <div className="w-full h-24 animate-pulse bg-neutral-100 dark:bg-neutral-700" />
             </li>
           ))}
       </ul>
