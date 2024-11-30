@@ -3,7 +3,8 @@ import { getPosts } from "@/lib/posts";
 
 const Page = async ({ searchParams }) => {
   const tags = searchParams?.tags?.split(",");
-  const posts = await getPosts({ tags });
+  const order = searchParams.order ?? "newest";
+  const posts = await getPosts({ tags, newest: order === "newest" });
 
   return (
     <>
@@ -13,6 +14,16 @@ const Page = async ({ searchParams }) => {
       </div>
 
       <hr />
+
+      <div className="mb-8">
+        Display&nbsp;
+        <Link
+          href={`/blog?order=${order === "newest" ? "oldest" : "newest"}`}
+          className="underline"
+        >
+          {order === "newest" ? "oldest" : "newest"}
+        </Link>
+      </div>
 
       <ul className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {posts.map((item) => (
