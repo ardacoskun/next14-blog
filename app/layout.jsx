@@ -2,6 +2,7 @@ import { roboto } from "./fonts";
 import Header from "@/components/Header";
 import Chatbot from "@/components/Chatbot";
 import "./globals.css";
+import useServerDarkMode from "@/hooks/useServerDarkMode";
 
 export const metadata = {
   title: {
@@ -12,8 +13,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const theme = useServerDarkMode();
+
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <body className={roboto.className}>
         <Header />
         <main className="mt-12">{children}</main>
