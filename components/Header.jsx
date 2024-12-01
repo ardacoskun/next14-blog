@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navigation from "./navigation/Navigation";
+import DarkMode from "./DarkMode";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
         </div>
         <Navigation />
       </div>
-      <div>Dark Toggle</div>
+      <DarkMode />
     </header>
   );
 };
