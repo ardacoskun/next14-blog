@@ -1,7 +1,9 @@
+import H1 from "@/components/h1";
+
 const Loading = () => {
   return (
     <div className="p-20">
-      <h1 className="mb-8 text-xl">Projects</h1>
+      <H1>Projects</H1>
       <ul className="space-y-8">
         {Array(3)
           .fill(0)

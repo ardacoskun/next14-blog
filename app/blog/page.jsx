@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
 import Pagination from "@/components/Pagination";
+import H1 from "@/components/h1";
 
 const Page = async ({ searchParams }) => {
   const tags = searchParams?.tags?.split(",");
@@ -16,7 +17,7 @@ const Page = async ({ searchParams }) => {
 
   return (
     <>
-      <h1 className="mb-8 text-xl">Recent Posts</h1>
+      <H1>Recent Posts</H1>
       <div className="mb-8 text-lg text-gray-600 dark:text-gray-400">
         Stay up to date with most recent posts
       </div>

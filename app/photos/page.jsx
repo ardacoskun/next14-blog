@@ -1,3 +1,4 @@
+import H1 from "@/components/h1";
 import dog1 from "./../../public/images/dog1.png";
 import dog2 from "./../../public/images/dog2.png";
 import dog3 from "./../../public/images/dog3.png";
@@ -13,9 +14,7 @@ export const metadata = {
 const Page = () => {
   return (
     <div>
-      <h1 className="grid-cols-1 mb-8 text-2xl font-semibold md:grid-cols-2">
-        My Photos
-      </h1>
+      <H1>My Photos</H1>
       <div className="grid grid-cols-2 gap-4">
         {images.map((item, index) => (
           <div key={index} className="relative overflow-hidden h-60">
