@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import useDarkMode from "@/hooks/useDarkMode";
 
 const nextModeIcons = {
   light: "🌚",
@@ -8,13 +7,9 @@ const nextModeIcons = {
 };
 
 const DarkMode = () => {
-  const [theme, setTheme] = useState("dark");
+  const { theme, toggleTheme } = useDarkMode();
 
-  const toggleNextMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-  return <button onClick={toggleNextMode}>{nextModeIcons[theme]}</button>;
+  return <button onClick={toggleTheme}>{nextModeIcons[theme]}</button>;
 };
 
 export default DarkMode;
